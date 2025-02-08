@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Essay Grading</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Automated Essay Grading System</h1>
+        
+        <form id="letter-form" enctype="multipart/form-data">
+            <label for="letter-file">Upload your formal letter (TXT or PDF):</label>
+            <input type="file" id="letter-file" name="letter_file" accept=".txt,.pdf" required>
+            
+            <button type="submit">Grade Letter</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Grading Result:</h2>
+            <pre id="grading-result"></pre>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
