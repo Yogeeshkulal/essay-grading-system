@@ -2,7 +2,7 @@ import openai
 import PyPDF2
 from flask import Flask, request, jsonify, render_template
 
-openai.api_key = "sk-your-openai-api-key"
+openai.api_key = "your-openai-api-key"
 
 app = Flask(__name__)
 
